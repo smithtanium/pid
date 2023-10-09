@@ -1,0 +1,35 @@
+#ifndef PID_H
+#define PID_H
+
+#include <ctime>
+
+class PID
+{
+  public:
+    //constructors	  
+    PID();
+    //destructor
+    ~PID();
+    //copy constructor
+    PID(const PID& other);
+    //move constructor
+    PID(PID&& other);
+    //copy assignment operator
+    PID& operator=(const PID other);
+    //move assignment operator
+    PID& operator=(PID& other);
+
+    //setters
+    
+    //getters
+    
+
+  protected:
+    double Kp;
+    double Ki;
+    double Kd;
+
+    double value;
+    time_t time;  
+
+};
